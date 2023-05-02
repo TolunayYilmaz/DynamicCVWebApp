@@ -8,7 +8,7 @@ namespace EntityLayer.Entities
 {
     public class TblTalent
     {
-        public byte Id { get; set; }
+        public int Id { get; set; }
         public string Talent { get; set; }
         public int Grade { get; set; }
     }

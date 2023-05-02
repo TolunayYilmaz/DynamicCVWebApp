@@ -15,6 +15,7 @@ namespace LogicLayer.Concrete
         {
             return dataBase.GetAll();
         }
+        //Yeni bağlantıyı veri tabanına ekler.
         public void AddCommunucation(TblCommunication communication)
         {
             if (communication.NameSurname.Length<7||communication.Mail.Length<5||communication.Subject.Length<10||communication.Message.Length<5)
@@ -25,6 +26,11 @@ namespace LogicLayer.Concrete
             {
                 dataBase.Insert(communication);
             }
+        }
+        //İstenilen bağlantıyı veritabanından çeker.
+        public TblCommunication GetCommunication(int Id)
+        {
+            return dataBase.GetByObj(Id);
         }
     }
 }

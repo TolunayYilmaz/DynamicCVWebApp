@@ -11,6 +11,8 @@ namespace LogicLayer.Concrete
     public class WorkManager
     {
         Repository<TblWork> dataBase = new Repository<TblWork>();
+
+        //Çalışılan yerlerin listesini getirir.
         public List<TblWork> WorkGetList()
         {
             return dataBase.GetAll();

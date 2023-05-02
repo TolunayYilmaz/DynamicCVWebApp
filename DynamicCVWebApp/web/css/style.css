@@ -529,6 +529,7 @@ h2.w3_head, h3.w3_head {
     line-height: 1.35em;
     color: #4a9aca;
     font-size: 3em;
+    width: 574px;
 }
 p.main_p {
     font-size: 1.4em;
@@ -555,6 +556,7 @@ p.iner {
     letter-spacing: 0.075em;
     color: #999;
     font-weight: 400;
+    width: 577px;
 }
 /* contact */
 .wedo {
@@ -780,6 +782,7 @@ p.banp.mt-3 {
 }
 p.iner {
     font-size: 1em !important;
+    
 }
 .news p {
     font-size: 16px !important;

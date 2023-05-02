@@ -55,6 +55,7 @@
     <Compile Include="Concrete\AddressManager.cs" />
     <Compile Include="Concrete\CommunicationManager.cs" />
     <Compile Include="Concrete\TalentManager.cs" />
+    <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="Concrete\WorkManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

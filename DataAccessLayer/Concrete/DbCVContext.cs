@@ -15,6 +15,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<TblTalent> TblTalents { get; set; }
         public DbSet<TblCommunication> TblCommunications { get; set; }
         public DbSet<TblWork> TblWorks { get; set; }
+        public DbSet<TblUsers> TblUsers { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

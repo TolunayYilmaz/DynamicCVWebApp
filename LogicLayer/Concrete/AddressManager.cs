@@ -12,16 +12,18 @@ namespace LogicLayer.Concrete
     {
         Repository<TblAddress> dataBase = new Repository<TblAddress>();
 
+        //Tüm Adresleri getirir.
         public List<TblAddress> AddressGetList()
         {
             return dataBase.GetAll();
         }
-
+        //Gönderilen adresi siler.
         public int DeleteAddress(TblAddress address)
         {
             return dataBase.Delete(address);
 
         }
+        //1 den büyük olma şartı vardır tek adres getirir.
         public TblAddress GetAddress(int id)
         { 
                 if (id > 0)
@@ -33,7 +35,7 @@ namespace LogicLayer.Concrete
                     return null;
                 }
         }
-
+        //Gönderilen adres ve ıd bilgilerne göre güncelleme yapar.
         public int UpdateAddress(int Id,TblAddress address)
         {
             TblAddress tblAddress= GetAddress(Id);
@@ -44,6 +46,8 @@ namespace LogicLayer.Concrete
             return dataBase.Update();
 
         }
+
+        // Yeni adres ekler.
         public int AddAddress(TblAddress address)
         {
             if (address.Address == "" || address.Mail == "")
