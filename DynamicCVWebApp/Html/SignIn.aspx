@@ -1,13 +1,13 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="DynamicCVWebApp.Html.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="DynamicCVWebApp.Html.SignIn" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server" >
-    <title></title>
+    <title>Kayıt Ol</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="/Login/images/icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="/Login/images/icons/user.png" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/Login/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -35,40 +35,34 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <div class="login100-form-title" style="background-image: url(/Login/images/bg-01.jpg);">
-                    <span class="login100-form-title-1">Kullanıcı Giriş Ekranı
+                    <span class="login100-form-title-1">Kullanıcı Kayıt Ekranı
                     </span>
                 </div>
 
                 <form class="login100-form validate-form" runat="server">
                     <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
                         <span class="label-input100">Kullanıcı Adı</span>
-
-                        <asp:TextBox ID="userName" class="input100" runat="server" placeholder="Kullanıcı adınızı yazınız."></asp:TextBox>
+                        
+                        <asp:TextBox ID="txtUserName" class="input100" runat="server" placeholder="Kullanıcı adınızı yazınız." ></asp:TextBox>
                         <span class="focus-input100"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
-                        <span class="label-input100">Şifreniz</span>
-                        <asp:TextBox ID="password" class="input100" runat="server" placeholder="Şifrenizi yazınız." TextMode="Password"></asp:TextBox>
+                        <span class="label-input100">Şifre</span>
+                        <asp:TextBox ID="txtPassword" class="input100" runat="server" placeholder="Şifrenizi yazınız." TextMode="Password"></asp:TextBox>
                         <span class="focus-input100"></span>
                     </div>
 
-                    <div class="flex-sb-m w-full p-b-30">
-                        <div class="contact100-form-checkbox">
-                            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
-                            <label class="label-checkbox100" for="ckb1">
-                                Beni Hatırla
-                            </label>
-                        </div>
-
-                        <div>
-                            <a href="#" class="txt1">Şifremi Unuttum?
-                            </a>
-                        </div>
+                      <div class="wrap-input100 validate-input m-b-18" data-validate="Password is required">
+                        <span class="label-input100">Tekrar Şifre</span>
+                        <asp:TextBox ID="txtPassword2" class="input100" runat="server" placeholder="Tekrar Şifrenizi yazınız." ></asp:TextBox>
+                        <span class="focus-input100"></span>
                     </div>
-
+                    <asp:Label ID="lblInfo" runat="server"  Text=""></asp:Label>
+                    <br />
                     <div class="container-login100-form-btn">
-                        <asp:Button ID="Button1" class="login100-form-btn" runat="server" Text="Giriş" OnClick="Button1_Click" />
+                        <asp:Button ID="btnSignIn" runat="server" CssClass="btn btn-info" Text="Kayıt Ol" OnClick="btnSignIn_Click"  />
+
                     </div>
                 </form>
             </div>

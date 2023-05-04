@@ -11,17 +11,17 @@ namespace DynamicCVWebApp.Html
 {
 
 
-    public partial class NewTalent
+    public partial class NewExperience
     {
 
         /// <summary>
-        /// txtTalent denetimi.
+        /// txtExperience denetimi.
         /// </summary>
         /// <remarks>
         /// Otomatik olarak oluşturulan alan.
         /// Değiştirmek için, alan bildirimini tasarımcı dosyasından arka plan kod dosyasına taşıyın.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTalent;
+        protected global::System.Web.UI.WebControls.TextBox txtExperience;
 
         /// <summary>
         /// btnInsert denetimi.

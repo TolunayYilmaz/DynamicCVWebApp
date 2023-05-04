@@ -11,5 +11,9 @@ namespace EntityLayer.Entities
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
+        public Nullable<int> AboutId { get; set; }
+        public Nullable<byte> AddressesId { get; set; }
+        public virtual TblAbout About { get; set; }
+        public virtual TblAddress Address { get; set; }
     }
 }

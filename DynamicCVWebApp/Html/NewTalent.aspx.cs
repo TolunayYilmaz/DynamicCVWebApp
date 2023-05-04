@@ -17,7 +17,7 @@ namespace DynamicCVWebApp.Html
 
         }
 
-        protected void btnİnsert_Click(object sender, EventArgs e)
+        protected void btnInsert_Click(object sender, EventArgs e)
         {
             TblTalent talent = new TblTalent();
             talent.Talent=txtTalent.Text;

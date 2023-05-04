@@ -7,7 +7,7 @@
     </h4>
     
     <br /> 
-      <asp:TextBox ID="txtTalent" runat="server" CssClass="form-control" placeholder="Yeteneğinizi Boş Alana Yazınız."></asp:TextBox>
+      <asp:TextBox ID="txtTalent" runat="server" CssClass="form-control" placeholder="Yeteneğinizi Boş Alana Yazınız." Height="80px" Width="500px"></asp:TextBox>
     <br />
-    <asp:Button ID="btnUpdate" runat="server" Text="Güncelle" CssClass="btn btn-info" OnClick="btnİnsert_Click" />
+    <asp:Button ID="btnInsert" runat="server" Text="Ekle" CssClass="btn btn-info" OnClick="btnInsert_Click" />
 </asp:Content>

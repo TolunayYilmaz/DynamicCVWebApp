@@ -19,6 +19,16 @@ namespace DataAccessLayer.Concrete
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+         modelBuilder.Entity<TblUsers>()
+         .HasOptional(s => s.Address)
+         .WithMany(d => d.TblUsers)
+         .HasForeignKey(s => s.AddressesId);
+
+            modelBuilder.Entity<TblUsers>()
+            .HasOptional(s => s.About)
+            .WithMany(d => d.TblUsers)
+            .HasForeignKey(s => s.AboutId);
         }
     }
 }

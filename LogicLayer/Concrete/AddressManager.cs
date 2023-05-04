@@ -17,11 +17,20 @@ namespace LogicLayer.Concrete
         {
             return dataBase.GetAll();
         }
+
         //Gönderilen adresi siler.
         public int DeleteAddress(TblAddress address)
         {
             return dataBase.Delete(address);
 
+        }
+
+        // Idsi verilen kulanıcının adreslerini getirir.
+        public List<TblAddress> AboutGet(int id)
+        {
+            List<TblAddress> addresses = new List<TblAddress>();
+            addresses.Add(dataBase.GetByObj(id));
+            return addresses;
         }
         //1 den büyük olma şartı vardır tek adres getirir.
         public TblAddress GetAddress(int id)
@@ -35,6 +44,7 @@ namespace LogicLayer.Concrete
                     return null;
                 }
         }
+
         //Gönderilen adres ve ıd bilgilerne göre güncelleme yapar.
         public int UpdateAddress(int Id,TblAddress address)
         {

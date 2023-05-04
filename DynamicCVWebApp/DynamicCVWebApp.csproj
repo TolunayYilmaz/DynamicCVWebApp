@@ -76,13 +76,17 @@
   <ItemGroup>
     <Content Include="Html\Default.aspx" />
     <Content Include="Html\Communications.aspx" />
+    <Content Include="Html\DeleteExperience.aspx" />
     <Content Include="Html\DeleteTalent.aspx" />
-    <Content Include="Html\Deneyimler.aspx" />
+    <Content Include="Html\Experiences.aspx" />
     <Content Include="Html\DetailMessage.aspx" />
     <Content Include="Html\Login.aspx" />
+    <Content Include="Html\NewExperience.aspx" />
     <Content Include="Html\NewTalent.aspx" />
+    <Content Include="Html\SignIn.aspx" />
     <Content Include="Html\Statistics.aspx" />
     <Content Include="Html\Talents.aspx" />
+    <Content Include="Html\UpdateExperience.aspx" />
     <Content Include="Html\UpdateTalent.aspx" />
     <Content Include="Login\css\main.css" />
     <Content Include="Login\css\util.css" />
@@ -95,6 +99,7 @@
     <Content Include="Login\images\bg-01.jpg" />
     <Content Include="Login\images\icons\favicon.ico" />
     <Content Include="Login\images\icons\map-marker.png" />
+    <Content Include="Login\images\icons\user.png" />
     <Content Include="Login\js\main.js" />
     <Content Include="Login\js\map-custom.js" />
     <Content Include="Login\vendor\animate\animate.css" />
@@ -200,6 +205,13 @@
     <Compile Include="Html\Communications.aspx.designer.cs">
       <DependentUpon>Communications.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Html\DeleteExperience.aspx.cs">
+      <DependentUpon>DeleteExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Html\DeleteExperience.aspx.designer.cs">
+      <DependentUpon>DeleteExperience.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Html\DeleteTalent.aspx.cs">
       <DependentUpon>DeleteTalent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -207,12 +219,12 @@
     <Compile Include="Html\DeleteTalent.aspx.designer.cs">
       <DependentUpon>DeleteTalent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Html\Deneyimler.aspx.cs">
-      <DependentUpon>Deneyimler.aspx</DependentUpon>
+    <Compile Include="Html\Experiences.aspx.cs">
+      <DependentUpon>Experiences.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Html\Deneyimler.aspx.designer.cs">
-      <DependentUpon>Deneyimler.aspx</DependentUpon>
+    <Compile Include="Html\Experiences.aspx.designer.cs">
+      <DependentUpon>Experiences.aspx</DependentUpon>
     </Compile>
     <Compile Include="Html\DetailMessage.aspx.cs">
       <DependentUpon>DetailMessage.aspx</DependentUpon>
@@ -228,12 +240,26 @@
     <Compile Include="Html\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Html\NewExperience.aspx.cs">
+      <DependentUpon>NewExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Html\NewExperience.aspx.designer.cs">
+      <DependentUpon>NewExperience.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Html\NewTalent.aspx.cs">
       <DependentUpon>NewTalent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Html\NewTalent.aspx.designer.cs">
       <DependentUpon>NewTalent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Html\SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Html\SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Html\Statistics.aspx.cs">
       <DependentUpon>Statistics.aspx</DependentUpon>
@@ -248,6 +274,13 @@
     </Compile>
     <Compile Include="Html\Talents.aspx.designer.cs">
       <DependentUpon>Talents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Html\UpdateExperience.aspx.cs">
+      <DependentUpon>UpdateExperience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Html\UpdateExperience.aspx.designer.cs">
+      <DependentUpon>UpdateExperience.aspx</DependentUpon>
     </Compile>
     <Compile Include="Html\UpdateTalent.aspx.cs">
       <DependentUpon>UpdateTalent.aspx</DependentUpon>

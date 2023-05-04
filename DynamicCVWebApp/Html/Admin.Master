@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Bootstrap Example</title>
+    <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="Statistics.aspx">Eğitim Hayatım</a></li>
-                    <li><a href="Deneyimler.aspx">Deneyimler</a></li>
+                    <li><a href="Experiences.aspx">Deneyimler</a></li>
                     <li><a href="Talents.aspx">Yeteneklerim</a></li>
                     <li><a href="Communications.aspx">İletişim</a></li>
                 </ul>

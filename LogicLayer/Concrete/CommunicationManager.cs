@@ -16,15 +16,16 @@ namespace LogicLayer.Concrete
             return dataBase.GetAll();
         }
         //Yeni bağlantıyı veri tabanına ekler.
-        public void AddCommunucation(TblCommunication communication)
+        public string AddCommunucation(TblCommunication communication)
         {
             if (communication.NameSurname.Length<7||communication.Mail.Length<5||communication.Subject.Length<10||communication.Message.Length<5)
             {
-                //hata
+                return "Mesajınız Gönderilemedi";
             }
             else
             {
                 dataBase.Insert(communication);
+                return "Mesajınız Gönderildi";
             }
         }
         //İstenilen bağlantıyı veritabanından çeker.

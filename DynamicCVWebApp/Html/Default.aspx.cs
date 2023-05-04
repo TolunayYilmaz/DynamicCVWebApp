@@ -14,7 +14,7 @@ namespace DynamicCVWebApp
         AboutManager aboutManager = new AboutManager();
         TalentManager talentManager = new TalentManager();
         CommunicationManager communicationManager = new CommunicationManager();
-        
+        public static string nameTitle;
         protected void Page_Load(object sender, EventArgs e)
         {
             var about = aboutManager.AboutGetList();
@@ -26,7 +26,9 @@ namespace DynamicCVWebApp
             Repeater3.DataBind();
             Repeater4.DataSource = talentManager.TalentGetList();
             Repeater4.DataBind();
-            Page.Title = aboutManager.GetInfo(1);
+            nameTitle = aboutManager.GetInfo(1);
+            Page.Title = nameTitle;
+              
          
         }
 
@@ -37,8 +39,8 @@ namespace DynamicCVWebApp
             communication.Mail = TextBox2.Text;
             communication.Subject = TextBox3.Text;
             communication.Message = TextBox4.Text;
-            communicationManager.AddCommunucation(communication);
-
+             TextBox4.Text= communicationManager.AddCommunucation(communication);
+            
 
         }
 

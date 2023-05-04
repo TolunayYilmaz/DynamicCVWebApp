@@ -11,9 +11,11 @@ namespace DynamicCVWebApp.Html
     public partial class Login : System.Web.UI.Page
     {
         UserManager userManager = new UserManager();
+    
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Page.Title = "Login "+ Default.nameTitle;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -21,7 +23,9 @@ namespace DynamicCVWebApp.Html
            
             if (userManager.LoginUser(userName.Text,password.Text))
             {
-                Response.Redirect("Communications.aspx");
+                int aboutId = userManager.AboutId;
+                Session["aboutId"] = aboutId;
+                Response.Redirect("Experiences.aspx?");
             }
             else
             {
