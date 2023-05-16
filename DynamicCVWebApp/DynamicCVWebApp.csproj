@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Html\Address.aspx" />
     <Content Include="Html\Default.aspx" />
     <Content Include="Html\Communications.aspx" />
     <Content Include="Html\DeleteExperience.aspx" />
@@ -184,6 +185,13 @@
     <Content Include="web\w3layouts-License.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Html\Address.aspx.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Html\Address.aspx.designer.cs">
+      <DependentUpon>Address.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Html\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

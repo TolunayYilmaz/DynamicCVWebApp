@@ -10,11 +10,13 @@ namespace DynamicCVWebApp
 {
     public partial class Deneyimler : System.Web.UI.Page
     {
-        
-        AboutManager about = new AboutManager();
+        private int aboutId;
+
+       private readonly AboutManager about = new AboutManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-            int aboutId = Convert.ToInt32(Session["aboutId"]);
+           
+            aboutId = Convert.ToInt32(Request.Cookies["aboutId"].Value);
             Repeater1.DataSource = about.AboutGet(aboutId);
             Repeater1.DataBind();
         }

@@ -11,9 +11,24 @@ namespace LogicLayer.Concrete
     public class CommunicationManager
     {
         Repository<TblCommunication> dataBase = new Repository<TblCommunication>();
-        public List<TblCommunication> CommunucationGetList()
+        List<string> message;
+        public List<TblCommunication> CommunucationGetList(int userId)
         {
-            return dataBase.GetAll();
+            if (userId >= 1)
+            {
+                List<TblCommunication> communucations = new List<TblCommunication>();
+                var communication = from x in dataBase.GetAll()
+                            where x.UserId == userId
+                            select x;
+                communucations.AddRange(communication);
+                return communucations;
+
+            }
+            else
+            {
+                return null;
+            }
+          
         }
         //Yeni bağlantıyı veri tabanına ekler.
         public string AddCommunucation(TblCommunication communication)
@@ -32,6 +47,15 @@ namespace LogicLayer.Concrete
         public TblCommunication GetCommunication(int Id)
         {
             return dataBase.GetByObj(Id);
+        }
+        public int MessageCount(int userId)
+        {
+            message = new List<string>();
+            var data=   from x in dataBase.GetAll()
+            where x.UserId == userId
+            select x.Message;
+            message.AddRange(data);
+            return message.Count;
         }
     }
 }

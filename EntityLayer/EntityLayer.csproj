@@ -55,6 +55,7 @@
     <Compile Include="Entities\TblAddress.cs" />
     <Compile Include="Entities\TblTalent.cs" />
     <Compile Include="Entities\TblCommunication.cs" />
+    <Compile Include="Entities\TblTalentUser.cs" />
     <Compile Include="Entities\TblUsers.cs" />
     <Compile Include="Entities\TblWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

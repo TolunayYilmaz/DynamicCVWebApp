@@ -12,19 +12,20 @@ namespace DynamicCVWebApp
     public partial class Default : System.Web.UI.Page
     {
         AboutManager aboutManager = new AboutManager();
-        TalentManager talentManager = new TalentManager();
+        //  TalentManager talentManager = new TalentManager();
+        TalentUserManager talentUserManager =new TalentUserManager();
         CommunicationManager communicationManager = new CommunicationManager();
         public static string nameTitle;
         protected void Page_Load(object sender, EventArgs e)
         {
-            var about = aboutManager.AboutGetList();
+            var about = aboutManager.AboutGet(1);
             Repeater1.DataSource = about;
             Repeater1.DataBind();
             Repeater2.DataSource = about;
             Repeater2.DataBind();
             Repeater3.DataSource = about;
             Repeater3.DataBind();
-            Repeater4.DataSource = talentManager.TalentGetList();
+            Repeater4.DataSource = talentUserManager.GetListTalent(1);
             Repeater4.DataBind();
             nameTitle = aboutManager.GetInfo(1);
             Page.Title = nameTitle;

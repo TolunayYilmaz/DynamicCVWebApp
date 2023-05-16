@@ -11,7 +11,7 @@ namespace LogicLayer.Concrete
     public class TalentManager
     {
         Repository<TblTalent> dataBase = new Repository<TblTalent>();
-
+        
         //Tüm yetenekleri getirir.
         public List<TblTalent> TalentGetList()
         {
@@ -46,6 +46,10 @@ namespace LogicLayer.Concrete
         public TblTalent GetTalent(int talentID)
         {
           return  dataBase.GetByObj(talentID);
+        }
+        public TblTalent LastGetTalent()
+        {
+            return dataBase.GetAll().Last();
         }
 
         //Ortalama puan getirir.

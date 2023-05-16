@@ -11,9 +11,15 @@ namespace LogicLayer.Concrete
     public class UserManager
     {
         Repository<TblUsers> dataBase = new Repository<TblUsers>();
-        
+        List<TblAbout> abouts;
         private int aboutId;
-        public int AboutId { get { return aboutId; } }  
+        public int AboutId { get { return aboutId; } }
+
+        private int userId;
+        public int UserId { get { return userId; } }
+
+        private byte addressId;
+        public byte AddressId { get { return addressId; } }
         //Veritabanından isim ve şifre çeker eşleşirse true döner.
         public bool LoginUser(string userName,string password)
         {
@@ -21,6 +27,8 @@ namespace LogicLayer.Concrete
             if (user.Any())
             {
                 aboutId = (int)user.ElementAt(0).AboutId;
+                addressId = (byte)user.ElementAt(0).AddressesId;
+                userId = (int)user.ElementAt(0).Id;
                 return true;
             }
             else
@@ -29,6 +37,12 @@ namespace LogicLayer.Concrete
             }
        
 
+        }
+        public List<TblAbout> GetAbout(int id)
+        {
+            abouts = new List<TblAbout>();
+            abouts.Add(dataBase.GetByObj(id).About);
+            return abouts ;
         }
 
         // Kayıt İşlemi yapmaktadır.
@@ -45,6 +59,12 @@ namespace LogicLayer.Concrete
             }
 
 
+        }
+        public int GetAboutCount(int userId)
+        {
+            abouts = new List<TblAbout>();
+            abouts.Add(dataBase.GetByObj(userId).About);
+            return abouts.Count;
         }
     }
 }

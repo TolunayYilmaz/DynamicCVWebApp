@@ -26,7 +26,7 @@ namespace LogicLayer.Concrete
         }
 
         // Idsi verilen kulanıcının adreslerini getirir.
-        public List<TblAddress> AboutGet(int id)
+        public List<TblAddress> AddressGet(int id)
         {
             List<TblAddress> addresses = new List<TblAddress>();
             addresses.Add(dataBase.GetByObj(id));

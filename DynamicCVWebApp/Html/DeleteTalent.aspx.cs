@@ -10,11 +10,13 @@ namespace DynamicCVWebApp.Html
 {
     public partial class DeleteTalent : System.Web.UI.Page
     {
-        TalentManager talent = new TalentManager();
+        //TalentManager talent = new TalentManager();
+        TalentUserManager talentUserManager = new TalentUserManager();
+        int talentId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            int x = int.Parse(Request.QueryString["ID"]);
-            talent.DeleteTalent(x);
+            talentId = int.Parse(Request.QueryString["ID"]);
+            talentUserManager.DelteTalentUser(talentId);
             Response.Redirect("Talents.aspx");
         }
     }

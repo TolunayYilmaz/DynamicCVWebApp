@@ -10,13 +10,17 @@ namespace DynamicCVWebApp.Html
 {
     public partial class Statistics : System.Web.UI.Page
     {
-        TalentManager manager = new TalentManager();
-        AboutManager aboutManager = new AboutManager(); 
+        
+        TalentUserManager userManager = new TalentUserManager();
+        CommunicationManager communicationManager = new CommunicationManager();
+       
         TalentManager talentManager= new TalentManager();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Label1.Text = manager.TalentGetList().Count.ToString();
-            Label2.Text=aboutManager.AboutGetList().Count.ToString();
+           
+            Label1.Text = userManager.GetListTalentCount(1).ToString();
+            Label2.Text =communicationManager.MessageCount(1).ToString();
+
             Label3.Text = talentManager.AvarageGrade();
             Label5.Text=talentManager.MaxTalent();
             Label4.Text = talentManager.MaxGrade();

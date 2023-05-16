@@ -10,22 +10,30 @@ namespace DynamicCVWebApp.Html
 {
     public partial class Login : System.Web.UI.Page
     {
-        UserManager userManager = new UserManager();
-    
-       
+        private readonly UserManager userManager = new UserManager();
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            Page.Title = "Login "+ Default.nameTitle;
+            Page.Title = "Login " + Default.nameTitle;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-           
-            if (userManager.LoginUser(userName.Text,password.Text))
+
+            if (userManager.LoginUser(userName.Text, password.Text))
             {
                 int aboutId = userManager.AboutId;
-                Session["aboutId"] = aboutId;
-                Response.Redirect("Experiences.aspx?");
+                byte addressId = userManager.AddressId;
+                int userId = userManager.UserId;
+                HttpCookie aboutIdCookie = new HttpCookie("aboutId", aboutId.ToString());
+                HttpCookie addressIdCookie = new HttpCookie("addressId", addressId.ToString());
+                HttpCookie userIdCookie = new HttpCookie("userId", userId.ToString());
+                Response.Cookies.Add(aboutIdCookie);
+                Response.Cookies.Add(addressIdCookie);
+                Response.Cookies.Add(userIdCookie);
+
+                Response.Redirect("Experiences.aspx");
             }
             else
             {

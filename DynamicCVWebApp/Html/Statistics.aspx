@@ -67,7 +67,7 @@
             <div class="icon-text">
                 <h3>
                     <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label></h3>
-                <p>Kitap Sayımız</p>
+                <p>Deneyim Sayısı</p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -125,7 +125,4 @@
         </div>
         <div class="clearfix"></div>
     </div>
-
-
-    deneme
 </asp:Content>

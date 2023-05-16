@@ -10,7 +10,7 @@ namespace LogicLayer.Concrete
 {
     public class AboutManager
     {
-        Repository<TblAbout> dataBase = new Repository<TblAbout>();
+         private readonly Repository<TblAbout> dataBase = new Repository<TblAbout>();
         
         //Tüm Bilgileri Listeler
         public List<TblAbout> AboutGetList()
@@ -19,10 +19,14 @@ namespace LogicLayer.Concrete
         }
         // Id si verilen kulanıcının bilgisini getirir.
 
-        public List<TblAbout> AboutGet(int id)
+        public List<TblAbout> AboutGet(int userId)
         {
-            List<TblAbout> abouts = new List<TblAbout>();
-            abouts.Add(dataBase.GetByObj(id));
+            List<TblAbout> abouts = new List<TblAbout>()
+            {
+                dataBase.GetByObj(userId)
+            };
+        
+        //    abouts.Add();
             return abouts;
         }
 
